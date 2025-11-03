@@ -7,11 +7,18 @@
     "text": "A collection of my coursework, classes, and academic projects at The Ohio State University."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "✍️ Writing",
     "section": "",
-    "text": "👋 Hi, I’m Henry Jiang\nPhysics undergraduate at The Ohio State University.\nThis is my personal website — built with Quarto and hosted on GitHub Pages.\nYou can also find my social media on the top right of the navigation bar!\nMore information is coming right up. I’m still figuring out some sturctures and push functions for Quarto and GitHub reository.\nHomepage for this website on GitHub"
+    "text": "Here I share reflections, ideas, and stories — sometimes about physics, sometimes about the world."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "⚙️ Projects",
+    "section": "",
+    "text": "2048 GPA Game\nA GPA 2048 game I built for fun in my senior year in highschool. That was one of the best year of my life. Play the game\n\n\nLLM Carbon Emission Calculator\nA work in progress\n\n\nInteractive WebR Dashboard - Visualizing Race Distribution in U.S. Higher Education\nThere were two moments in my experience with the internet that truly blew my mind.\nThe first was in 2021, when I encountered the Outlook for Windows (Preview) app after one of those endless Windows updates on my gaming PC. I remember asking myself: Is this a website or an app?\nLater, I learned it was one of Microsoft’s first major WebView2 integrations — and it changed how I saw the web. After that, I spent a year exploring web development, running MDN WebView daily on my Mac, fascinated by how HTML5 had evolved into a platform capable of hosting fully native experiences.\nThe second moment was discovering WebR — an almost unbelievable project where developers compiled the R language into WebAssembly, running entirely in the browser through minified JavaScript. I can’t imagine how painful it must have been to rebuild an advanced programming language using another advanced language, and it surely is: the latest release of WebR weighs about 37 MB, roughly 2–3 million lines of C/C++ and JavaScript.\nThanks to those developers, and to the teams behind modern web engines like Microsoft Edge and Google Chrome, our modern browsers today are powerful enough to execute millions of lines of code locally, statically, and efficiently.\nMy project builds on that power. I’m developing an interactive WebR dashboard that lets anyone run R code directly in the browser, with no environment setup, to generate visualizations of real-world data. This project will focus on the racial distribution among U.S. colleges. The site connects to the U.S. Department of Education’s College Scorecard API, allowing users to explore and compare diversity patterns across the nation’s higher education landscape.\nSo many interesting stories lie hidden in that data.\nThis is working in progress."
   },
   {
     "objectID": "photography.html",
@@ -21,17 +28,17 @@
     "text": "A collection of my favorite shots from trips, hikes, and life moments.\nStay tuned — new photos coming soon!"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "⚙️ Projects",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
     "section": "",
-    "text": "2048 GPA Game\nA GPA-themed 2048 game I built for fun.\nPlay the game"
+    "text": "👋 Hi, I’m Henry Jiang\nPhysics undergraduate at The Ohio State University.\nThis is my personal website — built with Quarto and hosted on GitHub Pages.\nYou can also find my social media on the top right of the navigation bar!\nMore information is coming right up. I’m still figuring out some sturctures and push functions for Quarto and GitHub reository.\nHomepage for this website on GitHub"
   },
   {
-    "objectID": "writing.html",
-    "href": "writing.html",
-    "title": "✍️ Writing",
+    "objectID": "LLM_Carbon_Usage.html",
+    "href": "LLM_Carbon_Usage.html",
+    "title": "LLM Carbon Emission Calculator",
     "section": "",
-    "text": "Here I share reflections, ideas, and stories — sometimes about physics, sometimes about the world."
+    "text": "Introduction:\nI use Large Language Model (LLM) everyday.\nMy favorite model is OpenAI gpt-4o and Google Gemini Flash.\nThe other day, I was on a ride with some friends to a climbing trip to Kentucky. They were talking about someone using ChatGPT to write essay to critisize on the carbon emission of AI chatbox.\nWe are all outdoor people, we care, love and protect the earth and environment a lot. Even though I plan not to stop using AI to reduce carbon emission, but you see the point here.\nIt is absolutely absurd and hallirious using a AI chatbox to write essay against AI chatbox, but that just revealed how much we rely on these now.\nIt makes me wonder, how much energy do AI actually eats. So I did some research.\nHow LLM works:\nModern LLM based on the Transformer architecture. They process user’s input (the prompt) and sequentially generate a relevant response, a process known as inference.\nThe environmental footprint of LLMs generally comprises two main components (Faiz et al., 2023):\nOperational Footprint: Emissions from the energy consumption of the hardware (GPUs, CPUs, etc.) during training and especially during inference (the moment I generate a response for you).\nEmbodied Footprint: Emissions associated with the manufacturing of the hardware (servers, chips, cooling systems) used for my training and serving.\nHow to quantify: tokens are the fundamental unit used to quantify and estimate the computational work during your inference.\nA token is a chunk of text, which can be a full word, part of a word, or punctuation. The computational cost, and therefore the energy use and carbon footprint, is generally proportional to the number of tokens processed (Poddar et al., 2025).\nThe interaction process is split into two distinct phases, both measured in tokens:\nPrefill (Input Tokens): When I process your input (the prompt). This is a compute-intensive phase where I process all input tokens in parallel to generate the initial context and the first output token (Stojkovic et al., 2024).\nDecode (Output Tokens): When I generate my response, token by token. This phase is typically memory-intensive and less parallelizable, as each new token depends on the previous one (Stojkovic et al., 2024).\nGenerally, the more words I output, the more computation is required. Here, we measure the token used to quantify the usage of LLM."
   }
 ]

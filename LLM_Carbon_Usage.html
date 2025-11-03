@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>⚙️ Projects – Henry Jiang</title>
+<title>LLM Carbon Emission Calculator – Henry Jiang</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Academics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="./projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">⚙️ Projects</h1>
+<h1 class="title">LLM Carbon Emission Calculator</h1>
 </div>
 
 
@@ -159,27 +159,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="gpa-game" class="level3">
-<h3 class="anchored" data-anchor-id="gpa-game">2048 GPA Game</h3>
-<p>A GPA 2048 game I built for fun in my senior year in highschool. That was one of the best year of my life. <a href="2048.html" class="btn btn-primary" target="_blank">Play the game</a></p>
-</section>
-<section id="llm-carbon-emission-calculator" class="level3">
-<h3 class="anchored" data-anchor-id="llm-carbon-emission-calculator">LLM Carbon Emission Calculator</h3>
-<p>A work in progress</p>
-</section>
-<section id="interactive-webr-dashboard---visualizing-race-distribution-in-u.s.-higher-education" class="level3">
-<h3 class="anchored" data-anchor-id="interactive-webr-dashboard---visualizing-race-distribution-in-u.s.-higher-education">Interactive WebR Dashboard - Visualizing Race Distribution in U.S. Higher Education</h3>
-<p>There were two moments in my experience with the internet that truly blew my mind.</p>
-<p>The first was in 2021, when I encountered the <strong>Outlook for Windows (Preview)</strong> app after one of those endless Windows updates on my gaming PC. I remember asking myself: <em>Is this a website or an app?</em></p>
-<p>Later, I learned it was one of Microsoft’s first major <a href="https://developer.microsoft.com/en-us/Microsoft-edge/webview2/?form=MA13LH"><strong>WebView2</strong></a> integrations — and it changed how I saw the web. After that, I spent a year exploring web development, running MDN WebView daily on my Mac, fascinated by how HTML5 had evolved into a platform capable of hosting fully native experiences.</p>
-<p>The second moment was discovering <a href="https://docs.r-wasm.org/webr/latest/"><strong>WebR</strong></a> — an almost unbelievable project where developers compiled the <a href="https://www.r-project.org/"><strong>R language</strong></a> into <a href="https://webassembly.org/"><strong>WebAssembly</strong></a>, running entirely in the browser through minified JavaScript. I can’t imagine how painful it must have been to rebuild an advanced programming language using another advanced language, and it surely is: the latest release of WebR weighs about <strong>37 MB</strong>, roughly <strong>2–3 million lines</strong> of C/C++ and JavaScript.</p>
-<p>Thanks to those developers, and to the teams behind modern web engines like Microsoft Edge and Google Chrome, our modern browsers today are powerful enough to execute millions of lines of code locally, statically, and efficiently.</p>
-<p>My project builds on that power. I’m developing an <strong>interactive WebR dashboard</strong> that lets anyone run R code directly in the browser, with no environment setup, to generate visualizations of real-world data. This project will focus on the <strong>racial distribution among U.S. colleges</strong>. The site connects to the <a href="https://collegescorecard.ed.gov/data/api-documentation"><strong>U.S. Department of Education’s College Scorecard API</strong></a>, allowing users to explore and compare diversity patterns across the nation’s higher education landscape.</p>
-<p>So many interesting stories lie hidden in that data.</p>
-<p>This is working in progress.</p>
+<p>Introduction:</p>
+<p>I use Large Language Model (LLM) everyday.</p>
+<p>My favorite model is OpenAI gpt-4o and Google Gemini Flash.</p>
+<p>The other day, I was on a ride with some friends to a climbing trip to Kentucky. They were talking about someone using ChatGPT to write essay to critisize on the carbon emission of AI chatbox.</p>
+<p>We are all outdoor people, we care, love and protect the earth and environment a lot. Even though I plan not to stop using AI to reduce carbon emission, but you see the point here.</p>
+<p>It is absolutely absurd and hallirious using a AI chatbox to write essay against AI chatbox, but that just revealed how much we rely on these now.</p>
+<p>It makes me wonder, how much energy do AI actually eats. So I did some research.</p>
+<p>How LLM works:</p>
+<p>Modern LLM based on the Transformer architecture. They process user’s input (the prompt) and sequentially generate a relevant response, a process known as inference.</p>
+<p>The environmental footprint of LLMs generally comprises two main components (Faiz et al., 2023):</p>
+<p>Operational Footprint: Emissions from the energy consumption of the hardware (GPUs, CPUs, etc.) during training and especially during inference (the moment I generate a response for you).</p>
+<p>Embodied Footprint: Emissions associated with the manufacturing of the hardware (servers, chips, cooling systems) used for my training and serving.</p>
+<p>How to quantify: tokens are the fundamental unit used to quantify and estimate the computational work during your inference.</p>
+<p>A token is a chunk of text, which can be a full word, part of a word, or punctuation. The computational cost, and therefore the energy use and carbon footprint, is generally proportional to the number of tokens processed (Poddar et al., 2025).</p>
+<p>The interaction process is split into two distinct phases, both measured in tokens:</p>
+<p>Prefill (Input Tokens): When I process your input (the prompt). This is a compute-intensive phase where I process all input tokens in parallel to generate the initial context and the first output token (Stojkovic et al., 2024).</p>
+<p>Decode (Output Tokens): When I generate my response, token by token. This phase is typically memory-intensive and less parallelizable, as each new token depends on the previous one (Stojkovic et al., 2024).</p>
+<p>Generally, the more words I output, the more computation is required. Here, we measure the token used to quantify the usage of LLM.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
